@@ -221,7 +221,7 @@ export const javascriptCourse = {
     {
       backgroundImage:
         'https://img-c.udemycdn.com/course/240x135/405878_e5a0_3.jpg',
-      title: 'JavaScript: Understanding the Weird Parts',
+      title: 'JavaScript, Understanding the Weird Parts',
       tutor: 'Anthony Alicia',
       newPrice: 3500,
       formerPrice: 14900,
