@@ -17,3 +17,12 @@ code {
   --purple: #5624d0;
   --nav-default-color: #6a6f73;
 }
+
+.best-seller {
+  background-color: #eceb98;
+  color: #3d3c0a;
+  width: 25%;
+  padding: 6px 8px;
+  font-weight: 800;
+  font-size: 12px;
+}

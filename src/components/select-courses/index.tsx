@@ -3,7 +3,12 @@ import {
   StyledSection,
   StyledP,
   StyledButton,
+  StyledCourseDiv,
+  StyledCourseP,
+  StyledImg,
+  StyledPopularDiv,
 } from '../styles/SelectCourse.styled';
+import { popularCourse } from './course';
 import Courses from './Courses';
 
 export default function SelectCourses() {
@@ -19,28 +24,76 @@ export default function SelectCourses() {
       <div>
         <div>
           <StyledButton onClick={() => setCourseTab('python')}>
-            Python
+            <span
+              className={`${activeCourseTab === 'python' ? 'active' : ''} `}
+            >
+              Python
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('excel')}>
-            Excel
+            <span className={`${activeCourseTab === 'excel' ? 'active' : ''} `}>
+              Excel
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('web')}>
-            Web Development
+            <span className={`${activeCourseTab === 'web' ? 'active' : ''} `}>
+              Web Development
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('javascript')}>
-            Javascript
+            <span
+              className={`${activeCourseTab === 'javascript' ? 'active' : ''} `}
+            >
+              Javascript
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('data')}>
-            Data Science
+            <span className={`${activeCourseTab === 'data' ? 'active' : ''} `}>
+              Data Science
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('aws')}>
-            AWS Certification
+            <span className={`${activeCourseTab === 'aws' ? 'active' : ''} `}>
+              AWS Certification
+            </span>
           </StyledButton>
           <StyledButton onClick={() => setCourseTab('drawing')}>
-            Drawing
+            <span
+              className={`${activeCourseTab === 'drawing' ? 'active' : ''} `}
+            >
+              Drawing
+            </span>
           </StyledButton>
         </div>
         <Courses course={activeCourseTab} />
+      </div>
+      <div>
+        <h2>Students are viewing</h2>
+        <StyledPopularDiv>
+          {popularCourse?.courseList.map((course, index) => (
+            <StyledCourseDiv>
+              <img src={course.backgroundImage} alt="Course logo" />
+              <h3>{course.title}</h3>
+              <p>{course.tutor}</p>
+              <StyledCourseP>
+                <span>{course.rating}</span>
+                <span>
+                  <StyledImg src="/images/Star.png" alt="" />
+                  <StyledImg src="/images/Star.png" alt="" />
+                  <StyledImg src="/images/Star.png" alt="" />
+                  <StyledImg src="/images/Star.png" alt="" />
+                  <StyledImg src="/images/half-color-star.png" alt="" />
+                </span>
+                <span>({course.number})</span>
+                <p>
+                  <span>₦{course.newPrice}</span>
+                  <span>₦{course.formerPrice}</span>
+                </p>
+                {course.bestSeller && <p className="best-seller">Bestseller</p>}
+              </StyledCourseP>
+            </StyledCourseDiv>
+          ))}
+        </StyledPopularDiv>
       </div>
     </StyledSection>
   );

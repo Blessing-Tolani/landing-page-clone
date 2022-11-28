@@ -14,11 +14,11 @@ export const StyledDiv = styled.div`
   top: 15%;
   left: 8%;
   background-color: white;
-  padding: 0px 80px 0px 20px;
+  padding: 0px 50px 0px 20px;
   & > h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.3rem;
-    line-height: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.7rem;
     margin-bottom: 0px;
   }
   & > p {

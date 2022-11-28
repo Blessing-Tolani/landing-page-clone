@@ -9,12 +9,10 @@ export default function HeroSection() {
     <StyledSection>
       <StyledImg src="/images/herosection-bg.jpg" alt="" />
       <StyledDiv>
-        <h1>
-          Cyber Sale on now: <br /> Courses from ₦2,500
-        </h1>
+        <h1>Cyber Sale ends tonight</h1>
         <p>
-          Take the first step toward a brighter future. <br /> Sale ends
-          tomorrow.
+          Last chance to bring home the latest skills <br /> with courses as low
+          as ₦2,500.
         </p>
       </StyledDiv>
     </StyledSection>
